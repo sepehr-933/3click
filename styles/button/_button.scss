@@ -1,0 +1,28 @@
+.button {
+  width: max-content;
+  color: white;
+  font-size: 1.4rem;
+  border-radius: 12px;
+  box-shadow: none;
+  font-family: "Yekan Bakh";
+  &__default {
+    padding: 1.4rem;
+  }
+  &__gradient {
+    background-image: $color-gradient;
+    padding: 1rem;
+  }
+  &__white {
+    background-color: white;
+    color: $color-button;
+    border: 1px solid $color-button;
+    font-weight: bold;
+    &:hover {
+      background-color: rgba(0,0,0,0.15);
+    }
+  }
+  &__big {
+    padding: 1rem 6rem;
+    font-size: 1.8rem;
+  }
+}

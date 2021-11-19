@@ -1,0 +1,45 @@
+.footer {
+  padding: 3rem 2rem 5rem 2rem;
+  background-color: white;
+  &-details {
+    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    @include respond(tab-port) {
+      box-shadow: none;
+    }
+    &__heading {
+      padding: 1rem;
+      border-radius: 15px;
+      border: 1px solid #8c8c8c;
+      font-size: 1.3rem;
+      font-weight: bold;
+      //media queries
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+    &__para {
+      font-size: 1.2rem;
+      color: #3a3a3a;
+      padding: 0.8rem 0;
+    }
+  }
+  &-brands {
+    grid-template-rows: repeat(2,10rem);
+    grid-template-columns: repeat(3, 10rem);
+    align-items: center;
+  }
+  &-brand {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-img {
+    width: 5rem !important;
+  }
+}

@@ -1,0 +1,13 @@
+.accordion {
+  box-shadow: 0 2px 6px rgba($color-primary, 0.2);
+  padding: 3rem 2rem;
+  font-size: 1.8rem;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  &-img {
+    transform: rotate(-90deg);
+  }
+  transition: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}

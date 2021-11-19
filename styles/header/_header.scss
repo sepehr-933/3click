@@ -1,0 +1,59 @@
+.header {
+  background-color: white;
+  padding: 2rem;
+  &-logo {
+
+  }
+  &-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: stretch;
+  }
+  &-ul {
+    display: flex;
+    font-size: 1.5rem;
+    background-color: white;
+    //media
+    @include respond(tablet) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      flex-direction: column;
+      z-index: 5000;
+      height: 100vh;
+      width: 70%;
+    }
+  }
+  &-li {
+    list-style-type: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.7rem;
+    color: $color-black-light;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 12px;
+    //media
+    @include respond(tablet) {
+      padding: 2rem 1.5rem;
+    }
+    &:hover {
+      background-color: rgba(0,0,0,0.15);
+    }
+    &:last-child:hover {
+      background-color: rgba($color-primary, 0.3);
+    }
+    &:last-child {
+      margin-left: 1rem;
+    }
+  }
+  &-button {
+    margin-left: auto;
+  }
+  &-number {
+    font-size: 1.6rem;
+    color: $color-button;
+    margin-left: 1rem;
+    font-weight: bold;
+  }
+}

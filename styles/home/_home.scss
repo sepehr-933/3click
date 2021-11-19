@@ -1,0 +1,400 @@
+.home {
+}
+.container-normal {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container-small {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+//tours
+.tours {
+   max-width: 1100px;
+   margin: 0 auto;
+  &-radio {
+    margin-left: 20rem;
+    @include respond(tab-port) {
+      margin-left: 0;
+    }
+  }
+  &-title {
+    @include respond(tab-port) {
+      flex-direction: column;
+      margin: 3rem auto;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &-paragraph {
+    font-size: 3.5rem;
+    font-weight: bold;
+    transform: translateY(-10%);
+  }
+  &-click {
+    border-bottom: 1px solid black;
+    width: max-content;
+    margin-left: auto;
+    @include respond(tab-port) {
+      margin: 0;
+      border-bottom: none;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  //radio buttons
+  &-circle {
+    position: relative;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid $color-secondary;
+    &__filler {
+      display: block;
+      background-color: $color-secondary;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -53%);
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+  &-more {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    width: max-content;
+    margin-right: auto;
+  }
+}
+
+//cardxx
+.cardxx {
+  background-color: white;
+  margin: 2rem 3rem;
+  font-size: 1.6rem;
+  box-shadow: 0 2px 6px rgba($color-primary, 0.3);
+  min-height: 70vh;
+  &-tourName {
+   background-image: linear-gradient(180deg,rgba(250,108,108,.35),rgba(45,61,108,.35) 46%,rgba(125,54,54,.35));
+   backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem 1.6rem 2.5rem 1.6rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    direction: rtl;
+    font-size: 3.7rem;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    min-width: max-content;
+  }
+  &-time {
+    background-color: #eff3f9;
+    border-radius: 12px;
+    padding: 0.2rem 1rem;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: $color-text;
+    width: max-content;
+    font-size: 2.5rem;
+  }
+  &-nextArrow {
+
+  }
+  &-prevArrow {
+
+  }
+  &-price {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__amount {
+      color: $color-primary-light;
+    }
+  }
+  &-content {
+   min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-img {
+    height: 31.6rem !important;
+  }
+  &-parameter {
+    color: $color-text;
+  }
+}
+
+// slick configurations
+.slick-disabled {
+  display: none !important;
+  border-radius: 12px !important;
+}
+.slick-prev::before, .slick-arrow::before {
+  content: '←' !important;
+  color: inherit !important;
+  position: relative !important;
+}
+.slick-prev::after {
+  content: url("../../public/Assets/Icons/icons8-back-24.png");
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  transform: translate(-50%,-50% );
+}
+.slick-next::after {
+  content: url("../../public/Assets/Icons/icons8-back-24.png");
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  transform: translate(-40%,-50% ) rotate(180deg);
+}
+
+
+//ads
+.ads {
+  grid-template-columns: 48% 23% 23%;
+  margin-bottom: 4rem;
+  max-width: 1200px;
+  grid-gap: 2%;
+  &-ad {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px 0 rgba(250,108,108,.08);
+  }
+  &-img {
+    border-radius: 15px;
+  }
+  &-ad1 {
+    grid-column: span 2;
+    height: 50rem !important;
+  }
+}
+
+//hotels
+.hotels {
+  direction: rtl;
+  &-card {
+    background-color: white;
+    border-radius: 90px 0 90px 0 !important;
+    padding: 2rem;
+    direction: rtl;
+    box-shadow: 0 2px 8px 0 rgba(250, 108, 108, 0.08);
+    margin: 2rem 1.5rem;
+    transition: all 0.2s;
+
+    &:hover {
+      box-shadow: 0 3px 8px 2px rgba(250, 108, 108, 0.4) ;
+    }
+  }
+  &-img {
+    border-radius: 90px 0 90px 0 !important;
+  }
+  &-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.6rem;
+  }
+  &-price {
+    color: $color-primary-light;
+  }
+}
+
+//flights
+.flight {
+  padding-bottom: 6rem;
+  //schedule
+  &-schedule {
+    background-color: white;
+    border-radius: 20px 20px 0 20px;
+    padding: 2rem;
+    width: 31rem;
+    min-width: 37rem;
+    &__wrapper {
+      overflow-y: scroll;
+      height: 40rem;
+      direction: ltr;
+      & div {
+        direction: rtl;
+      }
+      &::-webkit-scrollbar {
+        width: 0.24rem;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-primary;
+        border-radius: 2px;
+      }
+  }
+  }
+  &-schedules {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    //media
+    @include respond(sm-laptop) {
+      grid-template-columns: repeat(6,1fr);
+      display: none;
+    }
+    &__res {
+      display: none;
+      overflow-x: hidden;
+      width: 100%;
+      @include respond(sm-laptop) {
+       display: block;
+      }
+    }
+  }
+  &-heading {
+    background-image: linear-gradient(261deg, rgba(45, 61, 108, 0.08) 113%, rgba(252, 164, 164, 0.08) 0px);
+    border-radius: 25px;
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    color: $color-primary;
+  }
+  &-details {
+    background-color: rgb(251, 252, 254);
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-primary-light;
+      color: white;
+    }
+  }
+
+}
+
+//support
+.support {
+  max-width: 1100px;
+  margin:0 auto 3rem auto;
+  border: 1px solid rgba(#8c8c8c, 0.3);
+  border-radius: 20px;
+  padding: 3rem 1.5rem;
+  &-title {
+    border-bottom: 2px solid #8c8c8c;
+  }
+  &-input {
+    border-radius: 12px;
+    background-color: white;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 2px 6px rgba($color-primary, 0.3);
+    width: 20%;
+    transform: translateX(-13%);
+    &::placeholder {
+      transform: translateX(-20%);
+      font-size: 1.3rem;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &-envelope {
+    z-index: 1;
+  }
+  &-label {
+    transform: translateX(-25%);
+    margin-right: 3rem;
+  }
+  &-img {
+    height: 116px !important;
+    transition: all 0.7s;
+    padding: 1.5rem;
+    cursor: pointer;
+    max-width: 20rem;
+    &:hover {
+      background-color: white;
+      border-radius: 25px;
+    }
+  }
+
+}
+
+//magazine
+.magazine {
+   &-image {
+     border-radius: 20px;
+     width: 100%;
+     height: 28rem;
+     &__1 {
+       background: url("../../public/Assets/Images/jpeg/magazine/082e7b08d8121da8d256326c76624eee_9f57cf7c9a.jpg") no-repeat
+       center center/cover;
+     }
+     &__2 {
+       background: url("../../public/Assets/Images/jpeg/magazine/Expo_2020_Dubai_1_1_d5da5c2cfb.jpg") no-repeat
+     center center/cover;
+     }
+     &__3 {
+       background: url("../../public/Assets/Images/jpeg/magazine/5u_V_Qc_Em5_Atlantis_The_Palm_Exterior_Front_Shot_With_Royal_Pool_hme_aa65106aa6.jpg") no-repeat
+       center center/cover;
+     }
+     &__4 {
+       background: url("../../public/Assets/Images/jpeg/magazine/5c0d246dc03c0e15a49c546a_0d3585b568.jpg") no-repeat
+       center center/cover;
+     }
+     &__5 {
+       background: url("../../public/Assets/Images/jpeg/magazine/mrakz_khryd_astanbwl_dr_astanbwl_az_kj_152938_7e78d55618.jpg") no-repeat
+       center center/cover;
+     }
+     &__6 {
+       background: url("../../public/Assets/Images/jpeg/magazine/kysh_dr_shb_4_5e2e01af11.jpg") no-repeat
+       center center/cover;
+     }
+   }
+  &-explanation1 {
+    background-color: rgba(250,108,108,.82);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 10px;
+    top: 3rem;
+    right: 2rem;
+  }
+  &-explanation2 {
+    background-image: linear-gradient(117deg,rgba(0,0,0,.29) 52%,rgba(230,4,4,.59) 112%);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 10px;
+    top: 7rem;
+    right: 2rem;
+  }
+}
+
+//bests
+.bests {
+  margin-bottom: 3rem;
+  &-titles {
+    border-radius: 15px;
+    background-color: white;
+    padding: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0 9px 12px  rgba($color-primary, 0.15);
+    }
+  }
+}
+
