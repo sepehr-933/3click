@@ -1,0 +1,35 @@
+/**
+* * Rest style
+*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  @include respond(tab-port) {
+    font-size: 55%;
+  }
+  @include respond(big-phone) {
+    font-size: 47%;
+  }
+}
+
+body {
+  font-family: "Yekan Bakh", "sans-serif" !important;
+  color: $color-text;
+  overflow: auto;
+  background-color: #f5f5f5;
+  direction: rtl;
+  width: 100%;
+}
+
+#root {
+  direction: rtl;
+}

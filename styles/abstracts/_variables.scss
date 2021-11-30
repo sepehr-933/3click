@@ -1,0 +1,109 @@
+// Colors
+
+// ------------ Primary ------------
+$color-primary: rgb(250, 107, 107);
+$color-primary-light: #ff7372;
+$color-primary-dark: #fc4174;
+$color-white: #fff;
+$color-white-light: rgba(243, 243, 243, 0.7);
+
+//------------- Secondary -------------
+$color-secondary:#25479a;
+
+// ------------ Background ------------
+
+
+// ------------ black ------------
+$color-black: rgba(0,0,0,.87);
+$color-black-light: #5b5b5b;
+
+//------------------gray----------------
+$color-gray: #e5e5e5;
+$color-gray-light: #ededed;
+$color-gray-dark: #bbbbbb;
+$color-grey-dark-1: #707070;
+$color-dark-gray: rgba(0, 0, 0, 0.2);
+//-----------------------yellow-------------
+$color-yellow: #ffe661;
+$color-yellow-dark: #fcca46;
+
+//--------------red-------------
+$color-red: #f14242;
+//------------green---------
+$color-green-light: #0dca78;
+//------------blue----------
+$color-blue: #002977;
+// ------------ Text ------------
+$color-text: #121212;
+$color-button: #2d3d6c;
+$color-text-gray: #12121280;
+$color-text-blue: #002171;
+$color-text-light: #595959;
+$color-text-light-1: rgba(
+	$color: $color-text,
+	$alpha: 0.6,
+);
+$color-text-gray-dark: rgba(
+	$color: $color-text,
+	$alpha: 0.8,
+);
+$color-disable: #888888;
+$color-success: #329c00;
+$color-success-light: #b5d335;
+$color-error: #ff5a67;
+
+//gradients
+$color-gradient: linear-gradient(97deg,$color-primary-dark 3%,$color-primary-light 96%);
+
+$shadow-button: drop-shadow(
+	0 4px 6px
+		rgba(
+			$color: #000,
+			$alpha: 0.2,
+		)
+);
+$shadow-button-1: 0px 4px 6px rgba(13, 48, 107, 0.5);
+$shadow-backgroud: drop-shadow(
+	0px 4px 30px
+		rgba(
+			$color: #000,
+			$alpha: 0.25,
+		)
+);
+$shadow-backgroud1: 0px 2px 8px 2px
+	rgba(
+		$color: #000,
+		$alpha: 0.15,
+	);
+$shadow-backgroud-light-white: rgba(
+	$color: $color-white,
+	$alpha: 0.5,
+);
+$color-ppoup-backgroud: rgba(246, 133, 33, 0.5);
+$color-editor-back: #272822;
+// Fonts
+
+$font-primary: "vazir";
+$font-primary-medium: "vazir-medium";
+$font-primary-bold: "vazir-bold";
+
+$fonts: (
+	regular: $font-primary,
+	medium: $font-primary-medium,
+	bold: $font-primary-bold,
+	extra: $font-primary-bold,
+	black: $font-primary-bold,
+);
+
+$br-item: 2rem;
+$br-box: 3rem;
+
+// RESPONSIVE BREAKPOINTS
+$bp-xl: 75em; // 1200px
+$bp-lg: 62em; // 992px
+$bp-md: 48em; // 768px;
+$bp-sm: 36em; // 576px;
+$bp-xs: 30em; // 480px;
+
+//box shadow
+$box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.15);

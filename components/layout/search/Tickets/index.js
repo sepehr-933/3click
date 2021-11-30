@@ -2,11 +2,12 @@ import React,{useState,useEffect} from "react";
 import Image from "next/image";
 import icon from '../../../../Assets/Images/Icons/icons8-back-20.png'
 import TicketCard from "./TicketCard";
-import {searchApi} from "../api/searchApis";
-import {available} from "../api/available";
+import {finalData} from "../api/finalData";
 
 const Tickets = () => {
     const [activeFilter,setActiveFilter] = useState(1);
+    const {response} = finalData();
+    console.log(response);
     return (
         <div className="tickets">
             <div className="tickets-title p-8 flex items-center">

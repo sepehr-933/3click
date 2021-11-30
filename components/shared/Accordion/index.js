@@ -24,14 +24,14 @@ const Accordion = ({heading, children}) => {
                     show={active}
                     mountAnim={
                         ` 
-                       0% {height: 0}
-                       100% {height: 5rem} 
+                       0% {height: 1px}
+                       100% {height: 81px} 
                        `
                     }
                     unmountAnim={
                         `
-                       0% {height : max-content}
-                       100% {height: 1%}
+                       0% {height : 81px}
+                       100% {height: 1px}
                     `
                     }
                     time={0.4}

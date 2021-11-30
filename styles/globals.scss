@@ -1,0 +1,32 @@
+//shared
+@import './abstracts/variables';
+@import "./abstracts/mixins";
+@import './base/base';
+@import './base/typography';
+@import "./button/button";
+@import "./input/input";
+@import "./accordion/accordion";
+@import "./datepicker/date-picker";
+
+
+//tailwind
+@import "~tailwindcss/base.css";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+@layer base {
+  @font-face {
+    font-family: "Yekan Bakh";
+    src: url("../public/Assets/fonts/Yekan Bakh Regular.ttf");
+  }
+}
+
+//layout
+@import "./header/header";
+@import "./footer/footer";
+@import "./home/searchSection";
+@import "./home/home";
+@import "./search/search";
+
+//slick
+
+
